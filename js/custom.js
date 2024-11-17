@@ -42,4 +42,14 @@
   
   })(window.jQuery);
 
-
+window.onload = function(){
+  let form = document.getElementsByClassName("custom-form")[0];
+  form.onsubmit = function(e){
+    e.preventDefault();
+    let name = document.querySelector("[name=name].form-control").value;
+    let subject = document.querySelector("[name=subject].form-control").value;
+    let message = document.querySelector("[name=message].form-control").value;
+    console.log("Opening email");
+    window.location.replace(`mailto:info@jabebar.co.uk?subject=${name}%20-%20${subject}&body=${message}`);
+  }
+}
