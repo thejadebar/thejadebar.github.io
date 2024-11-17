@@ -44,12 +44,31 @@
 
 window.onload = function(){
   let form = document.getElementsByClassName("custom-form")[0];
-  form.onsubmit = function(e){
-    e.preventDefault();
-    let name = document.querySelector("[name=name].form-control").value;
-    let subject = document.querySelector("[name=subject].form-control").value;
-    let message = document.querySelector("[name=message].form-control").value;
-    console.log("Opening email");
-    window.location.replace(`mailto:info@jabebar.co.uk?subject=${name}%20-%20${subject}&body=${message}`);
+  let nameInput = form.querySelector("[name=name].form-control");
+  let subjectInput = form.querySelector("[name=subject].form-control");
+  let messageInput = form.querySelector("[name=message].form-control");
+  let updateEmailToSend = () => {
+    console.log("Updated Email To Send");
+    let sendButton = form.querySelector("a");
+    let name = nameInput.value;
+    let subject = subjectInput.value;
+    let message = messageInput.value;
+    sendButton.href = `mailto:info@jabebar.co.uk?subject=${name}%20-%20${subject}&body=${message}`
+  };
+  nameInput.addEventListener("input", updateEmailToSend);
+  subjectInput.addEventListener("input", updateEmailToSend);
+  messageInput.addEventListener("input", updateEmailToSend);
+
+
+  form.querySelector("a").onclick = (e) => {
+    let inputs = [...form.querySelectorAll(".form-control")].slice(0,-1);
+    for (field of inputs) {
+      let text = field.value;
+      if (!text || text == "") {
+        e.preventDefault();
+        window.alert(`Please fill in the form fields to submit`);
+        break;
+      }
+    }
   }
 }

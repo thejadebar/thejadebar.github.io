@@ -907,6 +907,25 @@ strong {
 /*---------------------------------------
   CUSTOM FORM               
 -----------------------------------------*/
+.custom-form a.form-control {
+  background: var(--custom-btn-bg-color);
+  border: none;
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--form-btn-font-size);
+  font-weight: var(--font-weight-bold);
+  transition: all 0.3s;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.custom-form a.form-control:hover,
+.custom-form a.form-control:focus {
+  background: var(--white-color);
+  border-color: transparent;
+  color: var(--primary-color);
+}
+
 .custom-form .form-control {
   color: var(--p-color);
   border-radius: var(--border-radius-small);
