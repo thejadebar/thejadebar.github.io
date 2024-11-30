@@ -987,6 +987,38 @@ strong {
   color: var(--white-color);
 }
 
+.custom-form input[type="checkbox"] {
+  display: inline;
+  width: 0;
+  margin-bottom: 0;
+}
+
+.checkbox-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-options div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 3 0 3 0;
+}
+
+.checkbox-options .form-label {
+  margin: 0 0 0 4;
+}
+
+.checkbox-options .form-control:focus {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.custom-form .checkbox-options .form-control.emulate-hover {
+  background: var(--primary-color);
+  border-color: transparent;
+}
+
 
 /*---------------------------------------
   SITE FOOTER              
