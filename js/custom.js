@@ -56,6 +56,8 @@ const optionMap = {
 }
 
 window.onload = function(){
+  activateCarouselListeners();
+
   let form = document.getElementsByClassName("custom-form")[0];
   let nameInput = form.querySelector("[name=name].form-control");
   let subjectInput = form.querySelector("[name=subject].form-control");
@@ -128,3 +130,17 @@ window.onload = function(){
     }
   }
 }
+
+const activateCarouselListeners = () => {
+  var carousel = new bootstrap.Carousel('#carouselExampleControls', { interval: false, wrap: false });
+  let left = document.getElementsByClassName("carousel-control-prev")[0];
+  let right = document.getElementsByClassName("carousel-control-next")[0];
+
+  let useCarousel = () => {
+    carousel.carousel()
+  };
+
+
+  left.addEventListener("input", useCarousel);
+  right.addEventListener("input", useCarousel);
+};

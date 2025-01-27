@@ -539,13 +539,15 @@ strong {
 -----------------------------------------*/
 .hero-section {
   background-color: var(--dark-color);
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
   min-height: 620px;
   text-align: center;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.hero-section::after {
+/* .hero-section::after {
   background-color: rgba(0, 0, 0, 0.65);
   border-radius: var(--border-radius-medium);
   content: "";
@@ -556,7 +558,7 @@ strong {
   width: 836px;
   height: 317px;
   pointer-events: none;
-}
+} */
 
 @media screen and (min-width: 991px) {
   .hero-section {
@@ -572,14 +574,32 @@ strong {
   color: var(--secondary-color);
 }
 
-.hero-section .custom-border-btn {
-  border-color: transparent;
+.hero-section .container {
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: var(--border-radius-medium);
+  width: auto;
+  padding: 20px 50px 15px;
 }
 
-.hero-section .container {
-  position: relative;
+/* div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
   z-index: 9;
 }
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+} */
 
 .hero-slides {
   width: 100%;
@@ -688,6 +708,24 @@ strong {
   margin: auto;
   top: 2px;
   bottom: 0;
+}
+
+
+/*---------------------------------------
+  Carousel              
+-----------------------------------------*/
+.carousel {
+  z-index: 9;
+  background-color: black;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.carousel-item {
+  flex: 0 0 auto;
+  width: 33.33%;
 }
 
 
