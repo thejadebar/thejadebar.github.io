@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -27,149 +28,84 @@
 <body>
             
         <main>
-            <div id="sticky-wrapper" class="sticky-wrapper" style="height: 154px;"><nav class="navbar navbar-expand-lg" style="width: auto!important;">                
-                <div class="container">
-                    <a class="navbar-brand d-flex align-items-center" href="index.html">
-                        <img src="images/logo/jade-logo.png" class="navbar-brand-image img-fluid" alt="JadeBar Template">
-                    </a>
-    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-auto">
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll active" href="#section_1">Home</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll inactive" href="#section_2">About</a>
-                            </li>
+            <div id="sticky-wrapper" class="sticky-wrapper" style="height: calc(100vh - var(--hero-height));">
+                <nav class="navbar navbar-expand-lg" style="width: auto!important;">                
+                    <div class="container">
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <img src="images/logo/jade-logo.png" class="navbar-brand-image img-fluid" alt="JadeBar Template">
+                        </a>
+        
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-lg-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll active" href="#section_1">Home</a>
+                                </li>
+        
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll inactive" href="#section_2">About</a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll inactive" href="#section_3">Services</a>
-                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll inactive" href="#section_3">Services</a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll inactive" href="#section_4">Reviews</a>
-                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll inactive" href="#section_4">Reviews</a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll inactive" href="#section_5">Contact</a>
-                            </li>
-                        </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll inactive" href="#footer">Contact</a>
+                                </li>
+                            </ul>
 
-                        <div class="ms-lg-3">
-                            <a class="btn custom-btn custom-border-btn" href="reservation.html">
-                                Book
-                                <i class="bi-arrow-up-right ms-2"></i>
-                            </a>
+                            <div class="ms-lg-3">
+                                <a class="btn custom-btn custom-border-btn" href="reservation.html">
+                                    Book
+                                    <i class="bi-arrow-up-right ms-2"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav></div>
+                </nav>
+            </div>
+
+            <div style="display: block; height: calc(100vh - var(--hero-height)); background-color: var(--dark-background-color);"></div>
 
 
             <section class="hero-section d-flex" id="section_1">
-                <!-- <div class="row" style="flex-basis: 100%;">
-                    <div class="col-1"></div>
-                    <div class="col-7" style="background-image: url(&quot;images/background-toast.jpg&quot;);background-size: cover;height: 45vh;background-position: center -111px;">
-                    </div>
-                    <div class="col-3"> -->
-                <div class="container">
-                    <div class="row align-items-center">
+                <div class="row justify-content-end">
+                    <div class="col-9">
+                        <div class="container">
+                            <div class="row align-items-center">
 
-                        <div class="col-lg-12 col-12 mx-auto">
-                            <!-- <h4 style="color: var(--secondary-color);"> -->
+                                <div class="col-lg-12 col-12 mx-auto">
+                                    <!-- <h4 style="color: var(--secondary-color);"> -->
 
-                            <h4 class="text-white mb-4 pb-lg-2">
-                                Bringing the bar to you wherever the celebration takes you!
-                            </h4>
+                                    <h4 class="text-white mb-4 pb-lg-2">
+                                        Bringing the bar to you wherever the celebration takes you!
+                                    </h4>
 
-                            <a class="btn custom-btn custom-border-btn smoothscroll me-3" href="#section_2">
-                                Our Story
-                            </a>
+                                    <a class="btn custom-btn custom-border-btn smoothscroll me-3" href="#section_2">
+                                        Our Story
+                                    </a>
 
-                            <a class="btn custom-btn custom-border-btn smoothscroll me-2 mb-2" href="#section_3"><strong>Our Services</strong></a>
+                                    <a class="btn custom-btn custom-border-btn smoothscroll me-2 mb-2" href="#section_3"><strong>Our Services</strong></a>
+                                </div>
+
+                            </div>
                         </div>
-
                     </div>
                 </div>
-
                 <!-- <div class="scrollmenu container">
                     <a href="#home">Home</a>
                     <a href="#news">News</a>
                     <a href="#contact">Contact</a>
                     <a href="#about">About</a>
                 </div> -->
-
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <!-- <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=First slide" alt=" slide"> -->
-                            First slide
-                        </div>
-                        <div class="carousel-item">
-                            <!-- <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide" alt=" slide"> -->
-                            Second slide
-                        </div>
-                        <div class="carousel-item">
-                            <!-- <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt=" slide"> -->
-                            Third slide
-                        </div>
-                        <div class="carousel-item">
-                            Fourth slide
-                        </div>
-                        <div class="carousel-item">
-                            <span>Fifth slide</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>PRIVATE PARTIES</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>CORPORATE EVENTS</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>ENGAGEMENT PARTIES</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>HEN/STAG PARTIES</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>ANNIVERSARIES</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>BIRTHDAY PARTIES</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>RETIREMENT PARTIES</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>BAR MITZVAHS</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>BABY SHOWERS</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>GENDER REVEALS</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>QUINCEANERA</span>
-                        </div>
-                        <div class="carousel-item">
-                            <span>CHRISTENING</span>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
                   
 
                 <div class="hero-slides vegas-container" style="padding: 0px;">
@@ -342,108 +278,7 @@
                 </div>
             </section>
 
-            <section class="contact-section section-padding" id="section_5">
-                <div class="container">
-                    <div class="row" style="justify-content: flex-end;">   
-
-                        <div class="col-lg-6 col-12 menu-block-wrap">
-                            <em class="text-white">Say Hello</em>
-                            <h2 class="text-white mb-4 pb-lg-2">Contact</h2>
-
-                            <form action="#" method="post" class="custom-form contact-form" role="form">
-
-                                <div class="row">
-                                    
-                                    <div class="col-lg-6 col-12">
-                                        <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
-
-                                        <input type="text" name="name" id="name" class="form-control" placeholder="Jackson" required="">
-                                    </div>
-
-                                    <div class="col-lg-6 col-12">
-                                        <label for="subject" class="form-label">Subject <sup class="text-danger">*</sup></label>
-
-                                        <input type="text" name="subject" id="subject" class="form-control" placeholder="Wedding - July" required="">
-                                    </div>
-
-                                    <div class="col-lg-4 col-12">
-                                        <label for="phone-number" class="form-label">Phone Number</label>
-
-                                        <input type="tel" name="phone-number" id="phone-number" class="form-control" placeholder="+44 7900 000 000">
-                                    </div>
-
-                                    <div class="col-lg-4 col-12">
-                                        <label for="event-date" class="form-label">Event Date</label>
-
-                                        <input type="date" name="event-date" id="event-date" class="form-control">
-                                    </div>
-
-                                    <div class="col-lg-4 col-12">
-                                        <label for="event-location" class="form-label">Event Location</label>
-
-                                        <input type="text" name="event-location" id="event-location" class="form-control" placeholder="London">
-                                    </div>
-
-                                    <div class="col-lg-4 col-12">
-                                        <label for="guests-estimate" class="form-label">Number of Guests</label>
-
-                                        <input list="options" id="guests-estimate" name="guests-estimate" class="form-control">
-                                        <datalist id="options">
-                                            <option value="1-50">
-                                            <option value="51-100">
-                                            <option value="101-150">
-                                            <option value="151-200">
-                                            <option value="200+">
-                                        </datalist>
-                                    </div>
-
-                                    <div class="col-lg-4 col-12 checkbox-options">
-                                        <p>Services you're interested in</p>
-                                        <div>
-                                            <input type="checkbox" id="all-inclusive" name="all-inclusive" class="form-control" value="all-inclusive-service">
-                                            <label for="all-inclusive" class="form-label">All-Inclusive</label><br />
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" id="pre-loaded" name="pre-loaded" class="form-control" value="pre-loaded-service">
-                                            <label for="pre-loaded" class="form-label">Pre Loaded Bar</label><br />
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" id="cash-bar" name="cash-bar" class="form-control" value="cash-bar-service">
-                                            <label for="cash-bar" class="form-label">Cash Bar</label><br />
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" id="dry-ice-welcome" name="dry-ice-welcome" class="form-control" value="dry-ice-welcome-service">
-                                            <label for="dry-ice-welcome" class="form-label">Dry Ice Welcome</label><br />
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" id="champagne-tower" name="champagne-tower" class="form-control" value="champagne-tower-service">
-                                            <label for="champagne-tower" class="form-label">Champagne Tower</label><br />
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" id="shot-tower" name="shot-tower" class="form-control" value="shot-tower-service">
-                                            <label for="shot-tower" class="form-label">Shot Tower</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label for="message" class="form-label">How can we help? <sup class="text-danger">*</sup></label>
-
-                                        <textarea name="message" rows="4" class="form-control" id="message" placeholder="Message" required=""></textarea>
-                                        
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-5 col-12 mx-auto mt-3">
-                                    <a href="#" class="form-control">Send Message</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <footer class="site-footer">
+            <footer class="site-footer" id="footer">
                 <div class="container">
                     <div class="row">
 
@@ -473,7 +308,7 @@
                             </ul>
                         </div>
 
-                        <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
+                        <div class="col-lg-7 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
                             <em class="text-white d-block mb-4">Contact</em>
 
                             <p class="d-flex mb-1">
@@ -491,34 +326,6 @@
                                     info@jadebar.co.uk
                                 </a>
                             </p>
-                        </div>
-
-
-                        <div class="col-lg-5 col-12">
-                            <em class="text-white d-block mb-4">Opening Hours.</em>
-
-                            <ul class="opening-hours-list">
-                                <li class="d-flex">
-                                    Monday - Friday
-                                    <span class="underline"></span>
-
-                                    <strong>9:00 - 18:00</strong>
-                                </li>
-
-                                <li class="d-flex">
-                                    Saturday
-                                    <span class="underline"></span>
-
-                                    <strong>11:00 - 16:30</strong>
-                                </li>
-
-                                <li class="d-flex">
-                                    Sunday
-                                    <span class="underline"></span>
-
-                                    <strong>Closed</strong>
-                                </li>
-                            </ul>
                         </div>
 
                         <div class="col-lg-8 col-12 mt-4">
