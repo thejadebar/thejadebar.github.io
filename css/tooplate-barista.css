@@ -42,12 +42,20 @@
   --serving-image: url('../images/background-toast.jpg');
   --wip-image: url('../images/mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c.jpg');
 
-  --hero-height:                  80vh;
+  --hero-height:                  88vh;
 }
 
 body {
   background-color: var(--white-color);
   font-family: var(--body-font-family); 
+}
+
+.flex-grow-2{
+  flex-grow: 2;
+}
+
+.min-vh-50{
+  min-height: 50vh;
 }
 
 
@@ -351,14 +359,16 @@ strong {
 .navbar {
   background: transparent;
   z-index: 999999;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .navbar .container {
   background: rgba(0, 0, 0, 0);
   border-radius: var(--border-radius-medium);
-  padding: 15px 30px;
+}
+
+.navbar .navbar-collapse {
+  background: rgba(0, 0, 0, 0);
+  border-radius: var(--border-radius-medium);
 }
 
 .navbar-brand,
@@ -562,7 +572,7 @@ strong {
 
 .hero-section .container {
   z-index: 9;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: var(--border-radius-medium);
   width: auto;
   padding: 20px 50px 15px;
@@ -618,6 +628,10 @@ div.scrollmenu a:hover {
 
 .about-section .ratio {
   border-radius: var(--border-radius-medium);
+}
+
+.about-section .row>* {
+  padding: 0;
 }
 
 .custom-video {
@@ -1098,13 +1112,15 @@ div.scrollmenu a:hover {
   border-radius: var(--border-radius-large);
   color: var(--white-color);
   font-size: var(--menu-font-size);
-  display: block;
+  display: flex;
   margin: 0 5px;
   text-align: center;
   width: 35px;
   height: 35px;
   line-height: 35px;
   transition: background 0.2s, color 0.2s;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icon-link:hover {
@@ -1265,6 +1281,34 @@ div.scrollmenu a:hover {
   .timeline-container-left::before,
   .timeline-container-right::before {
     top: 13px;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .flex-lg-grow-2{
+    flex-grow: 2;
+  }
+  .flex-lg-basis-33{
+    flex-basis: 33%;
+  }
+}
+
+
+@media screen and (min-width: 778px) {
+  .navbar .container,
+  .sticky-wrapper.is-sticky .container {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+
+@media screen and (min-width: 576px) {
+  .navbar .container,
+  .sticky-wrapper.is-sticky .container {
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
 
