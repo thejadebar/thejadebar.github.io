@@ -3,13 +3,16 @@
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                rgb(1, 57, 39); /*F, 26bb7f   197d55*/
-  --secondary-color:              #63dfae; /*S */
-  --section-bg-color:             rgb(1, 57, 39); /*B: b78752 58c297*/
+  --jade-color:                   #63dfae; /* #63dfae = rgb(99 223 174) */
+  --primary-color:                #0a1115; /*F: rgb(1, 57, 39); 26bb7f; 197d55*/
+  --secondary-color:              var(--jade-color); /*S cae6d5 */
+  --tertiary-color:               #26bb7f;
+  --primary-bg-color:             var(--white-color); /*B: b78752 58c297*/
+  --secondary-bg-color:           black;
+  --tertiary-bg-color:            var(--primary-color);
   --custom-btn-bg-color:          #26bb7f; /*F: BC6C25*/
-  --custom-btn-bg-hover-color:    #63dfae; /*S: DDA15E*/
+  --custom-btn-bg-hover-color:    var(--secondary-color); /*S: DDA15E*/
   --dark-color:                   #000000;
-  --dark-background-color:        #0a1115;
   --p-color:                      #717275;
   --border-color:                 #7fffd4;
   --link-hover-color:             #50e48d; /*Link: E76F51*/
@@ -42,6 +45,10 @@
   --serving-image: url('../images/background-toast.jpg');
   --wip-image: url('../images/mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c.jpg');
 
+  --bs-navbar-padding-y:          0.5rem; /* as defined in bootstrap.min.css */
+  --bs-navbar-brand-padding-y:    0.3125rem; /* as defined in bootstrap.min.css */
+  --navbar-container-padding-y:   1rem;
+  --navbar-brand-image-height:    5.6rem; /* 3.2em */
   --hero-height:                  88vh;
 }
 
@@ -137,6 +144,10 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+.text-jade {
+  color: var(--jade-color);
+}
+
 
 /*---------------------------------------
   SECTION               
@@ -147,7 +158,11 @@ strong {
 }
 
 .section-bg {
-  background-color: var(--section-bg-color);
+  background-color: var(--primary-bg-color);
+}
+
+.section-bg-2 {
+  background-color: var(--secondary-bg-color);
 }
 
 .section-overlay {
@@ -327,15 +342,27 @@ strong {
 }
 
 .jade-btn {
-  background: var(--custom-btn-bg-color);
-  border: none;
+  background: var(--primary-bg-color);
+  border: 2px solid var(--jade-color);
   border-radius: var(--border-radius-large);
-  color: var(--white-color);
+  color: var(--jade-color);
 }
 
 .jade-btn:hover {
-  background: var(--white-color);
-  color: var(--secondary-color);
+  background: var(--jade-color);
+  color: var(--primary-bg-color);
+}
+
+.jade-btn-2 {
+  background: var(--secondary-bg-color);
+  border: 2px solid var(--jade-color);
+  border-radius: var(--border-radius-large);
+  color: var(--jade-color);
+}
+
+.jade-btn-2:hover {
+  background: var(--jade-color);
+  color: var(--secondary-bg-color);
 }
 
 
@@ -351,9 +378,15 @@ strong {
 }
 
 .sticky-wrapper.is-sticky .container {
-  background: rgba(0, 0, 0, 0.85);
+  background: var(--tertiary-bg-color);
   border-radius: var(--border-radius-medium);
   padding: 15px 30px;
+}
+
+.navbar-overlay {
+  display: block;
+  height: calc(var(--navbar-brand-image-height) + 2*(var(--bs-navbar-brand-padding-y) + var(--navbar-container-padding-y) + var(--bs-navbar-padding-y)));
+  background-color: var(--tertiary-bg-color);
 }
 
 .navbar {
@@ -362,8 +395,9 @@ strong {
 }
 
 .navbar .container {
-  background: var(--dark-background-color);
+  background: var(--tertiary-bg-color);
   border-radius: var(--border-radius-medium);
+  padding: var(--navbar-container-padding-y) 30px;
 }
 
 .navbar .navbar-collapse {
@@ -381,7 +415,7 @@ strong {
 
 .navbar-brand-image {
   width: auto;
-  height: 3.2em;
+  height: var(--navbar-brand-image-height);
   margin-right: 10px;
 }
 
@@ -478,6 +512,13 @@ strong {
 
   .navbar .container{
     background: rgba(0, 0, 0, 0);
+    padding: 0 calc(var(--bs-gutter-x)* .5);
+  }
+  
+  .navbar-overlay {
+    display: block;
+    height: calc(var(--navbar-brand-image-height) + 2*(var(--bs-navbar-brand-padding-y) + var(--bs-navbar-padding-y)));
+    background-color: var(--tertiary-bg-color);
   }
 }
 
@@ -603,11 +644,6 @@ strong {
 /*---------------------------------------
   ABOUT              
 -----------------------------------------*/
-.about-section {
-  background-color: var(--secondary-color);
-  position: relative;
-}
-
 .about-section .ratio {
   border-radius: var(--border-radius-medium);
 }
@@ -1045,7 +1081,7 @@ strong {
 }
 
 .site-footer strong {
-  color: var(--white-color);
+  color: var(--jade-color);
 }
 
 .site-footer p,
@@ -1092,7 +1128,7 @@ strong {
 .social-icon-link {
   background: var(--primary-color);
   border-radius: var(--border-radius-large);
-  color: var(--white-color);
+  color: var(--jade-color);
   font-size: var(--menu-font-size);
   display: flex;
   margin: 0 5px;
@@ -1106,7 +1142,7 @@ strong {
 }
 
 .social-icon-link:hover {
-  background: var(--white-color);
+  background: var(--jade-color);
   color: var(--primary-color);
 }
 

@@ -1,4 +1,4 @@
-var sectionArray = [1, 2, 3];
+var sectionArray = [1, 2, 3, 4];
 
 $.each(sectionArray, function(index, value){
           
