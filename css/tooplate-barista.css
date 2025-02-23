@@ -645,7 +645,7 @@ strong {
   color: var(--secondary-color);
 }
 
-.team-block-wrap {
+.service-block-wrap {
   background-color: var(--secondary-color);
   border-radius: var(--border-radius-medium);
   position: relative;
@@ -654,15 +654,15 @@ strong {
   cursor: pointer;
 }
 
-.team-block-wrap:hover .team-block-image {
+.service-block-wrap:hover .service-block-image {
   transform: scale(1.2);
 }
 
-.team-block-image-wrap {
+.service-block-image-wrap {
   width: 100%;
 }
 
-.team-block-image {
+.service-block-image {
   display: block;
   object-fit: cover;
   width: 100%;
@@ -670,7 +670,7 @@ strong {
   transition: all 0.3s;
 }
 
-.team-block-info {
+.service-block-info {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), var(--primary-color));
   position: absolute;
   z-index: 2;
@@ -681,7 +681,7 @@ strong {
   padding: 30px;
 }
 
-.team-block-info .badge {
+.service-block-info .badge {
   margin: auto;
   top: 2px;
   bottom: 0;
