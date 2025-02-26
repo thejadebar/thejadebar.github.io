@@ -26,9 +26,9 @@
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
   --p-font-size:                  20px;
-  --btn-font-size:                16px;
+  --btn-font-size:                20px;
   --form-btn-font-size:           18px;
-  --menu-font-size:               16px;
+  --menu-font-size:               20px;
 
   --border-radius-large:          100px;
   --border-radius-medium:         20px;
@@ -39,11 +39,8 @@
   --font-weight-normal:           400;
   --font-weight-bold:             700;
 
-  --receiving-image: url('../images/young-female-barista-wear-face-mask-serving-take-away-hot-coffee-paper-cup-consumer-cafe.jpg');
   --receiving-image: url('../images/party-wine-toast.jpg');
-  --serving-image: url('../images/happy-waitress-giving-coffee-customers-while-serving-them-coffee-shop.jpg');
   --serving-image: url('../images/background-toast.jpg');
-  --wip-image: url('../images/mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c.jpg');
 
   --bs-navbar-padding-y:          0.5rem; /* as defined in bootstrap.min.css */
   --bs-navbar-brand-padding-y:    0.3125rem; /* as defined in bootstrap.min.css */
@@ -812,55 +809,6 @@ strong {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-right: 10px solid var(--secondary-color);
-}
-
-
-/*---------------------------------------
-  REVIEWS              
------------------------------------------*/
-.reviews-section {
-  background-color: #547e65; /*7c5c52*/
-}
-
-.reviews-block {
-  background-color: var(--section-bg-color);
-  border-radius: var(--border-radius-medium);
-  position: relative;
-  overflow: hidden;
-}
-
-.reviews-block .border-top {
-  border-top-color: rgba(255, 255, 255, 0.35) !important;
-}
-
-.reviews-block-image-wrap {
-  background-image: var(--wip-image);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 30px;
-}
-
-.reviews-block-image {
-  border-radius: var(--border-radius-large);
-  width: 65px;
-  height: 65px;
-  object-fit: cover;
-  margin-right: 10px;
-}
-
-.reviews-block-info {
-  padding: 20px 30px;
-}
-
-.reviews-block-info p {
-  font-size: var(--btn-font-size);
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.reviews-group i {
-  color: var(--white-color);
 }
 
 
