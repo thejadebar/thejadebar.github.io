@@ -46,7 +46,10 @@
   --bs-navbar-brand-padding-y:    0.3125rem; /* as defined in bootstrap.min.css */
   --navbar-container-padding-y:   1rem;
   --navbar-brand-image-height:    5.6rem; /* 3.2em */
-  --hero-height:                  88vh;
+  --navbar-height:                calc(var(--navbar-brand-image-height) + 2*(var(--bs-navbar-brand-padding-y) + var(--navbar-container-padding-y) + var(--bs-navbar-padding-y)));
+  --navbar-lg-height:             calc(var(--navbar-brand-image-height) + 2*(var(--bs-navbar-brand-padding-y) + var(--bs-navbar-padding-y)));
+  --hero-height:                  calc(100vh - var(--navbar-height));
+  --hero-lg-height:               calc(100vh - var(--navbar-lg-height));
 }
 
 body {
@@ -59,7 +62,7 @@ body {
 }
 
 .min-vh-50{
-  min-height: 50vh;
+  min-height: 50vh !important;
 }
 
 
@@ -142,7 +145,7 @@ strong {
 }
 
 .text-jade {
-  color: var(--jade-color);
+  color: var(--jade-color) !important;
 }
 
 
@@ -390,7 +393,7 @@ strong {
 
 .navbar-overlay {
   display: block;
-  height: calc(var(--navbar-brand-image-height) + 2*(var(--bs-navbar-brand-padding-y) + var(--navbar-container-padding-y) + var(--bs-navbar-padding-y)));
+  height: var(--navbar-height);
   background-color: var(--tertiary-bg-color);
 }
 
@@ -521,9 +524,11 @@ strong {
   }
   
   .navbar-overlay {
-    display: block;
-    height: calc(var(--navbar-brand-image-height) + 2*(var(--bs-navbar-brand-padding-y) + var(--bs-navbar-padding-y)));
-    background-color: var(--tertiary-bg-color);
+    height: var(--navbar-lg-height);
+  }
+  
+  .hero-section {
+    height: var(--hero-lg-height) !important;
   }
 }
 
@@ -724,6 +729,21 @@ strong {
   bottom: 0;
   left: 0;
   padding: 30px;
+
+  .front, .back {
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+  }
+  .front {
+    transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(180deg);
+    display: none;
+    * {
+      display: none;
+    }
+  }
 }
 
 .service-block-info .badge {
@@ -1263,6 +1283,7 @@ strong {
 }
 
 
+/* LARGE STYLES */
 @media screen and (min-width: 992px) {
   .flex-lg-grow-2{
     flex-grow: 2;
@@ -1270,11 +1291,16 @@ strong {
   .flex-lg-basis-33{
     flex-basis: 33%;
   }
+  .min-vh-lg-0{
+    min-height: 0vh !important;
+  }
 }
 
 
+/* MEDIUM STYLES */
 @media screen and (min-width: 778px) {}
 
 
+/* SMALL STYLES */
 @media screen and (min-width: 576px) {}
 

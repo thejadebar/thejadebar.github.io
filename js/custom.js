@@ -28,4 +28,9 @@
     }
   });
 
+  // CLICK CLASS
+  $('.service-block-info').click(function(){
+    $(this).find(".front, .back").toggleClass("front back");
+  });
+
 })(window.jQuery);
