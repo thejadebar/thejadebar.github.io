@@ -65,6 +65,10 @@ body {
   min-height: 50vh !important;
 }
 
+.fit-screen {
+  max-width: 1000px !important;
+}
+
 
 /*---------------------------------------
   TYPOGRAPHY               
