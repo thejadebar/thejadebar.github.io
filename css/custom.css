@@ -1173,8 +1173,12 @@ strong {
 }
 
 .socials-icon-link {
-  color: var(--jade-color);
+  color: var(--white-color);
   font-size: 30px;
+}
+
+.socials-icon-link::before {
+  color: var(--jade-color);
 }
 
 /*---------------------------------------
