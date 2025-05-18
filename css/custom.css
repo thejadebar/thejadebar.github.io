@@ -50,6 +50,8 @@
   --navbar-lg-height:             calc(var(--navbar-brand-image-height) + 2*(var(--bs-navbar-brand-padding-y) + var(--bs-navbar-padding-y)));
   --hero-height:                  calc(100vh - var(--navbar-height));
   --hero-lg-height:               calc(100vh - var(--navbar-lg-height));
+  --hero-item-max-height:         calc(var(--hero-height) - 3rem);
+  --hero-lg-item-max-height:      calc(var(--hero-lg-height) - 3rem);
 }
 
 body {
@@ -607,14 +609,13 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
+  display: flex;
   background-color: var(--dark-color);
   overflow: hidden;
   min-height: 620px;
   text-align: center;
   flex-direction: column;
-  justify-content: flex-start;
-  background-size: cover;
-  background-image: url("../images/background-toast.jpg");
+  justify-content: center;
   height: var(--hero-height);
 }
 
@@ -633,6 +634,14 @@ strong {
   width: auto;
   padding: 20px 50px 15px;
   margin: 3vh;
+}
+
+.hero-section-image {
+  border-radius: var(--border-radius-medium);
+  max-height: 40vh;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .opening-hours-list {
@@ -1297,6 +1306,9 @@ strong {
   }
   .min-vh-lg-0{
     min-height: 0vh !important;
+  }
+  .hero-section-image {
+    max-height: var(--hero-item-max-height);
   }
 }
 
