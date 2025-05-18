@@ -615,7 +615,7 @@ strong {
   min-height: 620px;
   text-align: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   height: var(--hero-height);
 }
 
@@ -661,6 +661,20 @@ strong {
   width: 35%;
   height: 1px;
   margin: auto 15px 0 15px;
+}
+
+/* LARGE STYLES */
+@media screen and (min-width: 992px) {
+  .hero-section-image {
+    max-height: var(--hero-item-max-height);
+  }
+}
+
+/* MEDIUM STYLES */
+@media screen and (min-width: 778px) {
+  .hero-section {
+    justify-content: center;
+  }
 }
 
 
@@ -1306,9 +1320,6 @@ strong {
   }
   .min-vh-lg-0{
     min-height: 0vh !important;
-  }
-  .hero-section-image {
-    max-height: var(--hero-item-max-height);
   }
 }
 
