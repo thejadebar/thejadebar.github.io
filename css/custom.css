@@ -1159,6 +1159,25 @@ strong {
 
 
 /*---------------------------------------
+  SOCIALS               
+-----------------------------------------*/
+
+.dark-background {
+  background: var(--tertiary-bg-color);
+}
+
+.socials-list-item {
+  list-style: none;
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.socials-icon-link {
+  color: var(--jade-color);
+  font-size: 30px;
+}
+
+/*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
 @media screen and (max-width: 1200px) {
@@ -1325,7 +1344,11 @@ strong {
 
 
 /* MEDIUM STYLES */
-@media screen and (min-width: 778px) {}
+@media screen and (min-width: 778px) {
+  .justify-content-md-center {
+    justify-content: center !important;
+  }
+}
 
 
 /* SMALL STYLES */
