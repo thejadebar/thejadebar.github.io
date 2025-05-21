@@ -154,6 +154,9 @@ strong {
   color: var(--jade-color) !important;
 }
 
+.text-jade-strong {
+  color: var(--tertiary-color) !important;
+}
 
 /*---------------------------------------
   SECTION               
@@ -613,14 +616,28 @@ strong {
   background-color: var(--dark-color);
   overflow: hidden;
   min-height: 620px;
-  text-align: center;
   flex-direction: column;
   justify-content: start;
   height: var(--hero-height);
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
 }
 
-.hero-section h1 {
+.hero-section > * {
   color: var(--white-color);
+}
+
+.hero-section {
+  h1 {
+    font-size: 35px;
+  }
+  h3 {
+    color: var(--white-color);
+    font-size: 20px;
+  }
+  .custom-btn {
+    font-size: 14px;
+  }
 }
 
 .small-text {
@@ -674,6 +691,15 @@ strong {
 @media screen and (min-width: 778px) {
   .hero-section {
     justify-content: center;
+    h1 {
+      font-size: 80px;
+    }
+    h3 {
+      font-size: 32px;
+    }
+    .custom-btn {
+      font-size: 22px;
+    }
   }
 }
 
