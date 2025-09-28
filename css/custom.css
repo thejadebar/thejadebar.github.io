@@ -1118,7 +1118,8 @@ strong {
 }
 
 .site-footer p,
-.site-footer-link {
+.site-footer-link,
+.site-footer a {
   color: rgba(255, 255, 255, 0.75);
   font-size: var(--btn-font-size);
 }
